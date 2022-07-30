@@ -1,0 +1,29 @@
+.header {
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 120px;
+        border: 1px solid #000;
+    }
+}
+
+.menu{
+    padding-right: 15px;
+
+    &__list{
+        display: flex;
+    }
+
+    &__item {
+        padding-right: 45px;
+        padding-left: 35px;
+        color: $cape-code;
+        font: 16px/22px $font-family-montserrat;
+    }
+}
+
+.logo{
+    margin: 0 auto;
+}
