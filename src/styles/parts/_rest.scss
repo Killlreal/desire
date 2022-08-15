@@ -2,6 +2,7 @@ body {
     min-width: 320px;
     height: 100%;
     margin: 0;
+    color: $default;
     // -webkit-font-smoothing: antialiased;
     // text-size-adjust: none;
     font: 16px/27px $font-family-open-sans;
@@ -91,21 +92,22 @@ ol {
 //     -webkit-tap-highlight-color: transparent;
 // }
 
-// button,
-// input,
-// textarea,
-// select {
-//     margin: 0;
-//     padding: 0;
-//     color: inherit;
-//     font-family: inherit;
-//     background: none;
-//     border: none;
-//     border-radius: 0;
-//     outline: none;
-//     appearance: none;
-//     appearance: none;
-// }
+button,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit; //hz
+    font-family: inherit;
+    line-height: inherit; //hz
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
 
 
 

@@ -1,0 +1,31 @@
+footer.footer 
+    .footer__content 
+        .container 
+            .footer__inner 
+                .footer__info.footer__pos
+                    h6.footer__title
+                        |Contact Us 
+                    p.footer__text
+                        | Keffiyeh poutine etsy, paleo cray put a 
+                        | bird on it microdosing schlitz you probably occupy
+                    a.footer__email(href="#") 
+                        +svgIcon(16, 16, "envelope")
+                        span.footer__email-text ouremailaddress@email.com
+                    form.footer__form(action="")
+                        input.footer__input(type="email" placeholder="Subscribe by email")
+                        button.footer__btn(type="submit") 
+                            |Send
+                ul.footer__social.footer__pos
+                    each val in ["Facebook", "Instagram", "Pinterest", "WhatsApp", "Youtube"]
+                        li.footer__item
+                            a.footer__social-link(href="#")
+                                +svgIcon(16, 16, ""+val)
+                                span.footer__social-text=val
+                nav.footer__menu.footer__pos
+                    ul.footer__list
+                        each val in ["Delivery", "FAQ", "Help", "More About Us"]
+                            li.footer__item
+                                a.footer__menu-link(href="#")=val
+    .footer__copyright 
+        .container 
+            p 674 Gonzales Drive.   Washington, PA 15301

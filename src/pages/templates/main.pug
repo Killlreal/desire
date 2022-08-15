@@ -1,9 +1,11 @@
+include ../../blocks/_mixins/icons
 doctype html
 html(lang="ru")
     include ../includes/meta
     body 
-        block header 
-            include ../../blocks/header/header
-        block container 
-        block footer 
-            include ../../blocks/footer/footer
+        .wrapper
+            block header 
+                include ../../blocks/header/header
+            block container 
+            block footer 
+                include ../../blocks/footer/footer
