@@ -29,7 +29,6 @@ const PAGES = fs
     .readdirSync(PAGES_DIR)
     .filter((fileName) => fileName.endsWith(".pug"));
 
-
 const smp = new SpeedMeasurePlugin();
 
 module.exports = {
@@ -57,9 +56,11 @@ module.exports = {
                 },
             },
         },
-        minimizer: [new TerserPlugin({
-            parallel: true
-        })],
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+            }),
+        ],
     },
     module: {
         rules: [

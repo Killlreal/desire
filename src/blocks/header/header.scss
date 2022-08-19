@@ -1,3 +1,5 @@
+@import "./header-popup/header-popup";
+
 .header {
 
     &__inner {
@@ -6,6 +8,14 @@
         justify-content: space-between;
         height: 120px;
         border: 1px solid #000;
+    }
+
+    &__btn {
+
+        &:hover{
+            cursor: pointer;
+            fill: rgb(134, 22, 247);
+        }
     }
 }
 

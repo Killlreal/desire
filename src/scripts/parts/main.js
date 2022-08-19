@@ -1,1 +1,1 @@
-import "../../blocks/home/popup/popup"
+import "../../blocks/header/header-popup/popup";
