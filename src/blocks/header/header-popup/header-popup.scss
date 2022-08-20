@@ -10,7 +10,7 @@
     background-color: rgba(27, 26, 26, 0.8);
     visibility: hidden;
     opacity: 0;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 
     &__body{
         display: flex;
@@ -26,8 +26,9 @@
         padding: 30px;
         background: rgb(230, 224, 224);
         border: 1px solid #000;
-        // transform: translate(0px, -100);
-        // transition: all 0.8s ease 0s;
+        transform: translate(0px, -100%);
+        opacity: 0;
+        transition: all 0.4s ease 0s;
     }
 
     &__close{
@@ -53,9 +54,14 @@
     // transform: translate(0px, 0px);
     visibility: visible;
     opacity: 1;
+
+    .popup__content{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
 }
 
-.popup-link{
+.js-popup-link{
     margin-right: 30px;
 }
 
