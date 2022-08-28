@@ -4,7 +4,7 @@ const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true;
 
-const timeout = 400;
+const timeout = 400; // ставим такой же, какой у нас css transform 
 
 popupLinks.forEach((item) => {
     item.addEventListener("click", function (e) {

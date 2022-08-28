@@ -1,0 +1,29 @@
+.decor{
+    padding: 170px 0 156px;
+    background-image: url("../assets/img/home/decor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title{
+        position: relative;
+        max-width: 731px;
+        margin-bottom: 21px;
+        padding-bottom: 22px;
+        color: $title;
+        font: 60px/80px $font-family-montserrat;
+
+        &::after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 1px;
+            background-color: $title;
+            content: "";
+        }
+    }
+
+    &__text{
+        max-width: 540px;
+    }
+}

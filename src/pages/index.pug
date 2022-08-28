@@ -1,4 +1,11 @@
-extends templates/main
+extends templates/base
 
-block container
-    include ../blocks/home/home
+
+block content 
+    include data 
+    .wrapper
+        include ../blocks/header/header
+
+        include ../blocks/home/home
+
+        include ../blocks/footer/footer

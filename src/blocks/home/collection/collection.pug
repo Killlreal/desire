@@ -1,0 +1,16 @@
+section.new-collection
+    .container-fluid
+        h3.new-collection__title
+            |   Furniture new collection
+        p.new-collection__text 
+            |   Deep v you probably haven't heard of them banh mi synth actually affogato. Aesthetic lyft ethical drinking vinegar austint
+        ul.collection
+            each val in ["1", "2", "3", "4", "5"]
+                li.collection__item
+                    a.collection__link(href="#") 
+                        img.collection__img(src=`../assets/img/home/furniture-${val}.png`, alt="")
+                        .collection__info 
+                            h6.collection__info-title 
+                                |   Truffaut literally trust
+                            p.collection__info-text 
+                                |   Living room furntiture | Chair

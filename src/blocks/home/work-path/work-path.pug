@@ -1,0 +1,25 @@
+-
+    var data = {
+        color: "red", 
+        name: "Kirill"
+    };
+
+
+section.work-path 
+    .container 
+        h3.work-path__title 
+            |   How it works
+        .work-path__items 
+            .work-path__box
+                .work-path__item!= data.name
+                .work-path__item 
+            .work-path__item
+
+//- nav.header__menu
+//-     .header__list
+//-         each object, key in data.header.menu
+//-             a.header__link.js-to-anchor(
+//-                 href=object.url
+//-                 data-link=key
+//-             )
+//-                 != object.name
