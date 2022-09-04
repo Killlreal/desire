@@ -1,9 +1,9 @@
-@import "./parts/fonts";
+@import "parts/fonts";
 // @import '~normalize.css';
-@import "./parts/vars";
-@import "./parts/rest";
-@import "./parts/mixins";
-@import "./parts/global";
+@import "parts/vars";
+@import "parts/rest";
+@import "parts/mixins";
+@import "parts/global";
 @import "../blocks/header/header";
 @import "../blocks/footer/footer";
 @import "../blocks//home/home";

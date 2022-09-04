@@ -1,0 +1,45 @@
+//- -
+//-     const data = {
+//-         button: [
+//-             {
+//-                 text: "Bedroom furniture",
+//-                 data: ".bedroom"
+//-             },
+//-             {
+//-                 text: "Living room furniture",
+//-                 data: ".living"
+//-             },
+//-             {
+//-                 text: "Office furniture",
+//-                 data: ".office"
+//-             },
+//-             {
+//-                 text: "Dining room futniture",
+//-                 data: ".dining"
+//-             },
+//-             {
+//-                 text: "Chair",
+//-                 data: ".chair"
+//-             }
+//-         ],
+//-         class: ["bedroom", "living", "office", "dining", "chair"],
+//-         img: [
+//-             "../assets/img/home/gallery/gallery-big.png",
+//-             "../assets/img/home/gallery/gallery-1.png",
+//-             "../assets/img/home/gallery/gallery-2.png",
+//-             "../assets/img/home/gallery/gallery-3.png",
+//-             "../assets/img/home/gallery/gallery-4.png",
+//-         ],
+//-     }
+
+//- .gallery 
+//-     .container-fluid 
+//-         .gallery__buttons 
+//-             each object in data.button
+//-                 button.gallery__btn(data-filter=object.data)=object.text
+//-         .gallery__inner
+//-             each object in data.class
+//-                 .gallery__items.mix(class=object)
+//-                     each object in data.img
+//-                         a.gallery__item(href="#") 
+//-                             img.gallery__img(src=object alt="image")

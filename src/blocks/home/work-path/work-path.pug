@@ -1,25 +1,38 @@
 -
     var data = {
-        color: "red", 
-        name: "Kirill"
+        works: [
+            {
+                img: '../assets/img/home/work-path/work-1.svg',
+                title: 'Designer Consultation',
+                text: 'Kinfolk scenester authentic craft beer truffaut irony intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche',
+            },
+
+            {
+                img: '../assets/img/home/work-path/work-2.svg',
+                title: 'Production',
+                text: 'Everyday carry actually neutra authentic kogi shabby chic',
+            },
+        ],
+
+        img: '../assets/img/home/work-path/work-3.svg',
+        title: 'Measurements',
+        text: 'Intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche',
     };
 
 
 section.work-path 
     .container 
-        h3.work-path__title 
+        h3.work-path__desc 
             |   How it works
         .work-path__items 
             .work-path__box
-                .work-path__item!= data.name
-                .work-path__item 
-            .work-path__item
+                each object in data.works
+                    .work-path__item
+                        img.work-path__img(src=object.img, alt="")
+                        h6.work-path__title!= object.title
+                        p.work-path__text!= object.text
+            .work-path__item.work-path__item_measure
+                img.work-path__img(src=data.img, alt="")
+                h6.work-path__title!= data.title
+                p.work-path__text!= data.text
 
-//- nav.header__menu
-//-     .header__list
-//-         each object, key in data.header.menu
-//-             a.header__link.js-to-anchor(
-//-                 href=object.url
-//-                 data-link=key
-//-             )
-//-                 != object.name
