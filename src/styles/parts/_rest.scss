@@ -1,3 +1,13 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     min-width: 320px;
     height: 100%;
@@ -8,11 +18,7 @@ body {
     font: 16px/27px $font-family-open-sans;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 
 h1,
 h2,

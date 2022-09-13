@@ -1,13 +1,27 @@
 @import "./header-popup/header-popup";
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-top;
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    transition: transform 0.1s linear;
+
+    &--hidden{
+        // position: relative;
+        transform: translateY(-120px);
+    }
+
+
 
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 120px;
-        border: 1px solid #000;
     }
 
     &__btn {
