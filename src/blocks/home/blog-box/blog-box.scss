@@ -20,6 +20,11 @@
         margin-bottom: 20px;
     }
 
+    &__img{
+        max-width: 100%;
+        height: auto;
+    }
+
     &__links{
         margin-bottom: 7px;
         color: $dove-gray;

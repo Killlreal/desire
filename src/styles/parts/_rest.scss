@@ -98,6 +98,7 @@ button,
 input,
 textarea,
 select {
+    box-sizing: border-box;//hz
     margin: 0;
     padding: 0;
     color: inherit;
@@ -109,6 +110,12 @@ select {
     border-radius: 0;
     outline: none;
     appearance: none;
+}
+
+// убираем скрол в хроме
+
+textarea{
+    overflow: auto;
 }
 
 

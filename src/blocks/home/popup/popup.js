@@ -1,34 +1,35 @@
-const popupLinks = document.querySelectorAll(".js-popup-link");
 const body = document.body;
 const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true;
 
-const timeout = 400; // ставим такой же, какой у нас css transform 
+const timeout = 400; // ставим такой же, какой у нас css transform
 
-popupLinks.forEach((item) => {
-    item.addEventListener("click", function (e) {
-        const popupName = item.getAttribute("href").replace("#", "");
-        const currentPopup = document.getElementById(popupName);
-        popupOpen(currentPopup);
-        e.preventDefault();
-    });
+document.addEventListener("click", (e) => {
+    const popupLink = e.target.closest(".js-popup-link");
+    if (!popupLink) return;
+
+    const popupName = popupLink.getAttribute("href").replace("#", "");
+    const currentPopup = document.getElementById(popupName);
+    popupOpen(currentPopup);
+    e.preventDefault();
 });
 
-const popupCloseIcon = document.querySelectorAll(".js-popup__close");
 
-popupCloseIcon.forEach((item) => {
-    item.addEventListener("click", function (e) {
-        popupClose(item.closest(".popup"));
-        e.preventDefault();
-    });
+document.addEventListener("click", (e) => {
+    const popupCloseIcon = e.target.closest(".js-popup__close");
+    if (!popupCloseIcon) return;
+
+    popupClose(popupCloseIcon.closest(".popup"));
+    e.preventDefault();
 });
+
 
 function popupOpen(currentPopup) {
     if (currentPopup && unlock) {
         const popupActive = document.querySelector(".popup.is-open");
         // если у нас в попапе ссылка на другой попап
-        if(popupActive){
+        if (popupActive) {
             popupClose(popupActive, false);
         } else {
             bodyLock();
@@ -43,7 +44,6 @@ function popupOpen(currentPopup) {
     }
 }
 
-
 function popupClose(popupActive, doUnlock = true) {
     if (unlock) {
         popupActive.classList.remove("is-open");
@@ -53,26 +53,28 @@ function popupClose(popupActive, doUnlock = true) {
     }
 }
 
+// добавляем/убираем padding при открытии popup
 
 function bodyLock() {
-    const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
-    lockPadding.forEach((item) =>{
-        item.style.lockPaddingRight = lockPaddingValue;
+    const lockPaddingValue =
+        window.innerWidth -
+        document.querySelector(".wrapper").offsetWidth +
+        "px";
+    lockPadding.forEach((item) => {
+        item.style.paddingRight = lockPaddingValue;
     });
     body.style.paddingRight = lockPaddingValue;
     body.classList.add("is-lock");
     unlock = false;
-    setTimeout(function() {
+    setTimeout(function () {
         unlock = true;
     }, timeout);
 }
 
 function bodyUnlock() {
-    setTimeout(function() {
-        lockPadding.forEach((item) =>{
-            item.style.lockPaddingRight = "0px";
-            console.log(item.style.lockPaddingRight);
-            
+    setTimeout(function () {
+        lockPadding.forEach((item) => {
+            item.style.paddingRight = "0px";
         });
         body.style.paddingRight = "0px";
         body.classList.remove("is-lock");
@@ -82,7 +84,6 @@ function bodyUnlock() {
         unlock = true;
     }, timeout);
 }
-
 
 // закрываем попап на esc
 document.addEventListener("keydown", function (e) {

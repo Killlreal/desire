@@ -47,8 +47,7 @@
     }
 
     &__img{
-        width: 100%;
-        max-width: 350px;
+        max-width: 100%;
         height: auto;
     }
 
@@ -97,11 +96,15 @@
 }
 
 .test{
-    width: 500px;
-    height: 300px;
+    position: relative;
+    width: 100px;
+    height: 100px;
     border: 1px solid #000;
 
     &__box{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 40px;
         height: 40px;
         border: 1px solid #000;
